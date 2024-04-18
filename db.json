@@ -80,5 +80,14 @@
             "Year": "2016",
             "Images": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjMxNjc1NjI0NV5BMl5BanBnXkFtZTgwNzA0NzY0ODE@._V1_SY1000_CR0,0,1497,1000_AL_.jpg"
         }
+    ],
+    "users": [
+        {
+            "Firstname": "Carrio",
+            "Lastname": "Guillaume",
+            "age": 21,
+            "email": "guillaume.carrio@labom2iformation.fr",
+            "password":"Pass123!"
+        }
     ]
 }
