@@ -13,6 +13,7 @@
                 <ErrorMessage name='password'/>
             </div>
             <button>Se connecter</button>
+            <button @click="signin">Pas encore de compte ?</button>
         </Form>
     </div>
 </template>
@@ -46,5 +47,9 @@ import {useRouter} from "vue-router";
                 }
             }
         }
+    }
+
+    const signin = () => {
+        router.push('signin')
     }
 </script>
