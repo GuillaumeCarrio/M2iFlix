@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router"
 
 import LoginView from "../views/LoginView.vue";
-import SigninView from "../views/SigninView.vue";
 import FilmsView from "../views/FilmsView.vue";
+import SigninView from "../views/SigninView.vue";
 import AccountView from "../views/AccountView.vue";
 import NotfoundView from "../views/NotfoundView.vue";
 
@@ -34,17 +34,15 @@ const routes = [
     },
     {
         path: '/:pathMatch(.*)',
-        name: 'notFound',
         component: NotfoundView,
+        name: 'notFound',
         meta: { title: "Page introuvable" }
     },
 ]
-
 const router = createRouter({
     history: createWebHistory(),
     routes
 })
-
 router.beforeEach((to, from, next) => {
     document.title = to.meta.title || 'Ajouter un titre'
     next()

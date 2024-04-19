@@ -1,41 +1,57 @@
 <template>
-    <h1>Créez votre compte</h1>
+    <h1>
+        Créez votre compte
+    </h1>
     <div>
         <Form @submit='ajouterPersonne' :validation-schema="schema" @invalid-submit='afficherErreur'>
             <div>
-                <label for='firstname'>Nom </label>
+                <label for='firstname'>
+                    Nom
+                </label>
                 <Field id='firstname' name='firstname' />
                 <ErrorMessage name='firstname'/>
             </div>
             <div>
-                <label for='lastname'>Prénom </label>
+                <label for='lastname'>
+                    Prénom
+                </label>
                 <Field id='lastname' name='lastname' />
                 <ErrorMessage name='lastname'/>
             </div>
             <div>
-                <label for='age'>Age </label>
+                <label for='age'>
+                    Age
+                </label>
                 <Field id='age' name='age' />
                 <ErrorMessage name='age'/>
             </div>
             <div>
-                <label for='email'>Email </label>
+                <label for='email'>
+                    Email
+                </label>
                 <Field id='email' name='email' />
                 <ErrorMessage name='email'/>
             </div>
             <div>
-                <label for='password'>Mot de passe </label>
+                <label for='password'>
+                    Mot de passe
+                </label>
                 <Field id='password' name='password' />
                 <ErrorMessage name='password'/>
             </div>
-            <button>Créer</button>
+            <button>
+                Créer
+            </button>
         </Form>
     </div>
 </template>
 <script setup>
     import { useRouter } from "vue-router";
     import { ErrorMessage, Field, Form } from 'vee-validate';
+
     import axios from 'axios';
     import * as yup from 'yup';
+
     const router = useRouter();
     const components= {
         ErrorMessage, Field, Form,
@@ -53,6 +69,9 @@
     }
     const emit = defineEmits(['sendData'])
     const ajouterPersonne = (values) => {
-        axios.post(`http://localhost:5555/users`, values).then(res => emit('sendData', res.data)).then(router.push('login'))
+        axios
+            .post(`http://localhost:5555/users`, values)
+            .then(res => emit('sendData', res.data))
+            .then(router.push('login'))
     }
 </script>
