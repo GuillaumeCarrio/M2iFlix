@@ -51,6 +51,7 @@
             for(let i = 0; i<pers.length; i++){
                 if (pers[i].email == values.email && pers[i].password == values.password){
                     router.push('films')
+                    localStorage.setItem('myFilms', '[]')
                 }
             }
         }

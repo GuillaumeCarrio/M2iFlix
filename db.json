@@ -99,18 +99,19 @@
   ],
   "users": [
     {
-      "Firstname": "Carrio",
-      "Lastname": "Guillaume",
+      "Firstname": "C",
+      "Lastname": "G",
       "age": 21,
-      "email": "guillaume.carrio@labom2iformation.fr",
+      "email": "g.c@lm2if.fr",
       "password": "Pass123!",
-      "id": "1ef6"
+      "id": "1ef6",
+      "myfilms":[]
     },
     {
       "id": "1aa2",
       "firstname": "Ca",
       "lastname": "Gu",
-      "age": "21",
+      "age": "31",
       "email": "gc@gc.fr",
       "password": "Abybuj12!"
     }
