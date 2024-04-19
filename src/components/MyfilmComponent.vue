@@ -4,20 +4,19 @@
         <p>
             {{ film.Title }} : Année = {{ film.Year }}
         </p>
-        <button @click="ajout(film.id)">Ajouter ce film a mon compte</button>
+        <button @click="delet(film.id)">Enlever ce film de mon compte</button>
     </div>
 </template>
 
 <script setup>
     const film = defineModel('film')
-    const ajout = (film) => {
+    const delet = (film) => {
         let myfilms = JSON.parse(localStorage.getItem('myFilms'))
-        if (!myfilms.includes(film)){
-            myfilms.push(film)
-        } else {
-            alert('Vous avez déjà ce film')
+        if (myfilms.includes(film)){
+            let i = myfilms.indexOf(film)
+            myfilms.splice(i,1)
         }
-        localStorage.setItem('myFilms',JSON.stringify(myfilms));
+        localStorage.setItem('myFilms',JSON.stringify(myfilms))
     }
 </script>
 
