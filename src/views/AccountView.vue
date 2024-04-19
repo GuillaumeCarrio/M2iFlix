@@ -1,9 +1,17 @@
 <template>
     <div>
         <h1>
-            Liste des films
+            Liste de vos films
         </h1>
-        <MyfilmComponent v-for="(film, ind) in films" v-model:film="films[ind]"/>
+        <div class="films" v-if="films.length > 0">
+            <MyfilmComponent v-for="(film, ind) in films" v-model:film="films[ind]"/>
+        </div>
+        <div v-else>
+            <p>Vous n'avez aucun film.</p>
+            <button @click="add">
+                En ajouter ?
+            </button>
+        </div>
     </div>
 </template>
 <script setup>
@@ -27,5 +35,19 @@
             })
             .catch(() => erreur = 'Pb de récup des films')
     })
-
+    const router = useRouter();
+    const add = () => {
+        router.push('films')
+    }
 </script>
+<style scoped>
+    button{
+        border: solid 2px black;
+        margin: 2vh;
+        background-color: cornflowerblue;
+    }
+    .films{
+        display: flex;
+        flex-wrap: wrap;
+    }
+</style>

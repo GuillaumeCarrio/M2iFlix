@@ -75,3 +75,10 @@
             .then(router.push('login'))
     }
 </script>
+<style scoped>
+    button{
+        border: solid 2px black;
+        margin: 2vh;
+        background-color: chartreuse;
+    }
+</style>

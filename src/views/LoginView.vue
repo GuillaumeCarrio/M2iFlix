@@ -18,10 +18,10 @@
                 <Field id='password' name='password' />
                 <ErrorMessage name='password'/>
             </div>
-            <button>
+            <button class="co">
                 Se connecter
             </button>
-            <button @click="signin">
+            <button class="sign" @click="signin">
                 Pas encore de compte ?
             </button>
         </Form>
@@ -60,3 +60,19 @@
         router.push('signin')
     }
 </script>
+<style scoped>
+    button{
+        border: solid 2px black;
+        margin: 2vh;
+    }
+    .co{
+        background-color: chartreuse;
+    }
+    .sign{
+        background-color: cornflowerblue;
+    }
+    .films{
+        display: flex;
+        flex-wrap: wrap;
+    }
+</style>

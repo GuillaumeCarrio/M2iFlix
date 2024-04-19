@@ -3,7 +3,9 @@
         <h1>
             Liste des films
         </h1>
-        <FilmComponent v-for="(film, ind) in films" v-model:film="films[ind]"/>
+        <div class="films">
+            <FilmComponent v-for="(film, ind) in films" v-model:film="films[ind]"/>
+        </div>
     </div>
 </template>
 <script setup>
@@ -22,3 +24,9 @@
             .catch(() => erreur = 'Pb de récup des films')
     })
 </script>
+<style scoped>
+    .films{
+        display: flex;
+        flex-wrap: wrap;
+    }
+</style>
