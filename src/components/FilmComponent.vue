@@ -1,7 +1,9 @@
 <template>
     <div>
         <img :src='film.Images' />
-        <p>{{ film.Title }} : Année = {{ film.Year }}</p>
+        <p>
+            {{ film.Title }} : Année = {{ film.Year }}
+        </p>
     </div>
 </template>
 
@@ -10,8 +12,8 @@
 </script>
 
 <style scoped>
-img {
-    width: 20vw;
-    height: 30vh;
-}
+    img {
+        width: 20vw;
+        height: 30vh;
+    }
 </style>

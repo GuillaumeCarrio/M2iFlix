@@ -1,10 +1,10 @@
-<script setup>
-  const name = 'App'
-</script>
-
 <template>
-  <router-view />
+    <HeaderComponent />
+    <router-view />
 </template>
 
-<style scoped>
-</style>
+<script setup>
+    import HeaderComponent from './components/HeaderComponent.vue';
+
+    const name = 'App'
+</script>
